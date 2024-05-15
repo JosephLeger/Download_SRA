@@ -8,6 +8,7 @@ It requires a comma-delimited table containing SRR numbers in the first column, 
 Name                     Version
 sra-tools                2.11.0
 ```
+*Note : sra-tools is loaded as an installed module in the provided script. If you use a custom environment you need to change it in the SETUP section of DL_SRA.sh*
 
 ### Syntax 
 sh DL_SRA.sh <sheet_sample.csv>
