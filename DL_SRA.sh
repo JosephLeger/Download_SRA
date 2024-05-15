@@ -26,7 +26,7 @@ ${BOLD}DESCRIPTION${END}\n\
 ${BOLD}ARGUMENTS${END}\n\
     ${BOLD}<sheet_sample.csv>${END}\n\
         Path to .csv sample information sheet.\n\
-        Provided sheet must be structured in 4 columns : \n\
+        Provided sheet must be structured in 2 columns : \n\
                 1)SRR_ID to download\n\
                 2)Filename\n\n\
 
@@ -45,12 +45,12 @@ if [ $# -eq 1 ] && [ $1 == "help" ]; then
         Help
         exit
 elif [ $# -ne 1 ]; then
-        # Error if no input directory is provided
+        # Error if no CSV file is provided
         echo 'Error synthax : please use following synthax'
         echo '      sh DL_SRA.sh <sheet_sample.csv>'
         exit
-elif (( !${#files} )); then
-        # Error if provided directory is empty or does not exists
+elif [ $(ls $1 2>/dev/null | wc -l) -lt 1 ]; then
+        # Error if provided CSV file does not exists
         echo 'Error : can not find files in provided directory. Please make sure the provided directory exists, and contains .fastq.gz or .fq.gz files.'
         exit
 fi
