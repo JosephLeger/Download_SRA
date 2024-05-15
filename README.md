@@ -1,6 +1,6 @@
 # Download_SRA
 ### Description
-Short script used to download and rename properly SRA files from Accession List.  
+Short script used to download, rename and gzip SRA FASTQ files from Accession List.  
 It requires a comma-delimited table containing SRR numbers in the first column, and desired corresponding filename in the second column (See [Example_SRR_List.csv](https://github.com/JosephLeger/Download_SRA/blob/main/data/Example_SRR_List.csv)).  
 
 ### Environment
