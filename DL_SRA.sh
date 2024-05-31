@@ -60,9 +60,7 @@ fi
 ################################################################################################################
 
 ## SETUP - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#module load sra-tools/3.1.0
-# or
-conda activate SRA_toolkit
+module load sra-tools/3.1.0
 
 # Generate REPORT
 echo '#' >> ./0K_REPORT.txt
